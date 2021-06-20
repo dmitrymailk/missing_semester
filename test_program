@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Starting program at $(date)" # Date will be substituted
+echo "Running program $0 with $# arguments with pid $$"
+for file in "$@"; do
+  echo "Some file -> $file"
+  if [[ $? -ne 1 ]]; then
+    echo "OK!"
+  fi
+done
