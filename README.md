@@ -279,4 +279,85 @@ for arg in reversed(sys.argv[1:]):
 3
 ```
 
-остановился на https://youtu.be/kgII-YWo3Zw?t=1905
+### Найти что-то в папках
+
+```console
+# Find all directories named src
+find . -name src -type d
+# Find all python files that have a folder named test in their path
+find . -path '*/test/*.py' -type f
+# Find all files modified in the last day
+find . -mtime -1
+# Find all zip files with size in range 500k to 10M
+find . -size +500k -size -10M -name '*.tar.gz'
+```
+
+### Найти что-то а потом для этих файлов что-то исполнить
+
+```console
+# Delete all files with .tmp extension
+find . -name '*.tmp' -exec rm {} \;
+# Find all PNG files and convert them to JPG
+find . -name '*.png' -exec convert {} {}.jpg \;
+```
+
+### Вывести историю комманд
+
+```console
+history
+>
+199  rg
+200  apt install ripgrep
+201  dpkg --configure -a
+202  type updatedb updatedb
+203  rpm -qf /usr/bin/updatedb
+204  apt-get remove mlocate
+205  fzf
+206  apt install fzf
+207  history
+208  cat README.md | fzf
+209  history
+```
+
+### Поиск по тексту в реальном времени
+
+```console
+cat README.md | fzf
+>
+```
+
+### Вывести красивое дерево файлов и папок
+
+```console
+tree
+>
+.
+├── New Folder
+├── README.md
+├── list_txt.txt
+├── python_script.py
+├── some_1.py
+├── some_2.py
+├── some_3.py
+├── some_4.py
+├── some_5.py
+├── test
+│   ├── 1
+│   ├── 2
+│   └── 3
+├── test_1.txt
+├── test_2.txt
+├── test_3.txt
+├── test_4.txt
+├── test_5.txt
+├── test_6.txt
+├── test_7.txt
+└── test_program
+```
+
+# Лекция № 3: Editors (vim) (2020)
+
+- Ссылка на лекцию: https://youtu.be/a6Q8Na575qc
+- Теги: #vim
+  Vim обладает большим количеством горячих клавиш. Более того вся концепция vim состоит в том что его интерфейс подобен **языку программирования**. Нужно просто начать использовать его. Больше всего мне запомнилось из лекции что можно просто набрать _dw_ и он удалит целое слово, а если набрать _4dw_ он удалит 4 впереди идущих слова. Также не нужно отрывать руки от клавиатуры и двигать мышкой. Тратит в сотню раз меньше памяти чем VS code.<br/>
+  Для его изучения можно попробовать игры которые я нашел

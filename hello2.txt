@@ -1,2 +1,0 @@
--rwxrwxrwx 1 root root    0 Jun 20 19:54 hello2.txt
-Sun Jun 20 19:57:44 MSK 2021
