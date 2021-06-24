@@ -1,8 +1,0 @@
-./list_txt.txt
-./test_1.txt
-./test_2.txt
-./test_3.txt
-./test_4.txt
-./test_5.txt
-./test_6.txt
-./test_7.txt
